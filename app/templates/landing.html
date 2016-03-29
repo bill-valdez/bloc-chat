@@ -1,14 +1,5 @@
 <div>
-    <h1>{{ landing.heroTitle }}</h1>
     <ul>
-	    <li ng-repeat="person in landing.list">
-	    	<!-- Here, we iterate over each object in our list array in the landing controller.
-				We refer to each itereation as 'person' meaning the properties are accessed via person.name and person.age.
-				You could change 'person' to anything, like 'item', and reference the properties as item.name and item.age too!
-				We repeat the li element for every object in our list.
-				https://docs.angularjs.org/api/ng/directive/ngRepeat
-	    	 -->
-	    	{{ person.name }}, {{ person.age }}
-	    </li>
+	    <!-- on a <li> here, add an ng-repeat that iterates over every item in the Room.all array that gets returned! -->
 	</ul>
 </div>

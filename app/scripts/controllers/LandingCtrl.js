@@ -1,23 +1,11 @@
  (function() {
-     function LandingCtrl() {
-         this.heroTitle = "We want to hear whay you have to say!";
-         this.list = [
-         	{ 
-         		name: 'Joe',
-         		age: 32
-         	},
-         	{
-         		name: 'Eva',
-         		age: 24
-         	},
-         	{
-         		name: 'Lin',
-         		age: 70
-         	}
-         ];
+     function LandingCtrl( Room ) {
+     	// here's what our Room factory returns: inspect this array in the console to see the values! Then, assign it to something accessible from landing.html,
+     	// like this.roomList.
+     	console.log( Room.all );
      }
  
      angular
          .module('blocChat')
-         .controller('LandingCtrl', LandingCtrl );
+         .controller('LandingCtrl', [ 'Room', LandingCtrl ] );
 })();
