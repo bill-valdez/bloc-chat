@@ -1,5 +1,7 @@
 <div>
     <ul>
-	    <!-- on a <li> here, add an ng-repeat that iterates over every item in the Room.all array that gets returned! -->
-	</ul>
+        <li ng-repeat="chatRoom in landing.chatrooms">
+            {{ chatRoom.$value }}
+        </li>
+    </ul>
 </div>

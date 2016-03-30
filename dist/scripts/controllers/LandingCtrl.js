@@ -1,9 +1,10 @@
- (function() {
-     function LandingCtrl( Room ) {
-     	console.log( Room.all );
+ (function () {
+     function LandingCtrl(Room) {
+         this.chatrooms = Room.all;
+         console.log(Room.all);
      }
- 
+
      angular
          .module('blocChat')
-         .controller('LandingCtrl', [ 'Room', LandingCtrl ] );
-})();
+         .controller('LandingCtrl', ['Room', LandingCtrl]);
+ })();
