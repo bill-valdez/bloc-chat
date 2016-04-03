@@ -10,9 +10,8 @@
                             alert("Hello from the Room factory!");
                         },
                         addRoom: function(){
-                            rooms.$add({
-                                
-                                name:"hello"
+                            rooms.$add({  
+                                $value:"hello"
                             })
                         }
                     }
@@ -23,4 +22,3 @@
                     .module('blocChat')
                     .factory('Room', ['$firebaseArray', Room]);
             })();
-      

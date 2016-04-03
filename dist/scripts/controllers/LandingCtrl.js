@@ -1,4 +1,4 @@
- (function () {
+   (function () {
      function LandingCtrl(Room) {
          this.chatrooms = Room.all;
          console.log(Room.all);
