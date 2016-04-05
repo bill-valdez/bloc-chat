@@ -6,12 +6,9 @@
 
                     return {
                         all: rooms,
-                        sayHello: function () {
-                            alert("Hello from the Room factory!");
-                        },
-                        addRoom: function(){
+                        addRoom: function(anything){
                             rooms.$add({  
-                                $value:"hello"
+                                $value:anything
                             })
                         }
                     }

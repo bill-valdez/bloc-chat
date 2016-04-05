@@ -4,6 +4,7 @@
             {{ chatRoom.$value }}
         </li>
     </ul>
-    
-    <button ng-click="landing.addroom()"> SayHello! </button>
+    {{landing.chatName}}
+    <input ng-model="landing.chatName"> 
+    <button ng-click="landing.addroom(landing.chatName)">New Chat Room</button>
 </div>
