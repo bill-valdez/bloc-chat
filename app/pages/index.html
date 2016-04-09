@@ -8,7 +8,7 @@
 	</head>
 	<body>
 	    <h1>Bloc Chat</h1>
-	    
+        <div ng-include="'/templates/landing.html'"></div>
 	     <ui-view></ui-view>
 	    
 	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
@@ -21,5 +21,6 @@
 	    <script src="/scripts/app.js"></script>
 	    <script src="/scripts/factories/Room.js"></script>
 	    <script src="/scripts/controllers/LandingCtrl.js"></script>
+        <script src="/scripts/controllers/ModalCtrl.js"></script>
 	</body>
 </html>

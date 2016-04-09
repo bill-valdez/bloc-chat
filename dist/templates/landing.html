@@ -1,10 +1,11 @@
-<div>
+<div ng-controller='LandingCtrl as landing'>
     <ul>
         <li ng-repeat="chatRoom in landing.chatrooms">
             {{ chatRoom.$value }}
         </li>
     </ul>
-    {{landing.chatName}}
-    <input ng-model="landing.chatName"> 
-    <button ng-click="landing.addroom(landing.chatName)">New Chat Room</button>
+   
+    <div ng-controller="ModalCtrl as modal">
+        <button ng-click="modal.open()">Add New Chatroom</button>     
+    </div>
 </div>
