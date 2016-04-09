@@ -1,7 +1,11 @@
-<div>
+<div ng-controller='LandingCtrl as landing'>
     <ul>
         <li ng-repeat="chatRoom in landing.chatrooms">
             {{ chatRoom.$value }}
         </li>
     </ul>
+   
+    <div ng-controller="ModalCtrl as modal">
+        <button ng-click="modal.open()">Add New Chatroom</button>     
+    </div>
 </div>
