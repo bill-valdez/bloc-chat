@@ -12,11 +12,10 @@
                 })
             },
             getMessages: function (chatRoomId) {
-                 return messages.orderByChild("roomId").equalTo(chatRoomId);
+                return $firebaseArray(firebaseRef.child('messages').orderByChild('roomId').equalTo(chatRoomId))
             },
             getRooms: function (roomId) {
-                console.log(firebaseRef.child('rooms').orderByChild("$id").equalTo(roomId))
-                 return firebaseRef.child('rooms').orderByChild("$id").equalTo(roomId);
+                return $firebaseArray(firebaseRef.child('rooms').orderByChild('$id').equalTo(roomId));
             }
         }
 
