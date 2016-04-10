@@ -2,13 +2,21 @@
     function Room($firebaseArray) {
         var firebaseRef = new Firebase('https://crackling-heat-508.firebaseio.com/');
         var rooms = $firebaseArray(firebaseRef.child('rooms'));
+        var messages = $firebaseArray(firebaseRef.child('messages'));
 
         return {
             all: rooms,
-            addRoom: function(anything){
-                rooms.$add({  
-                    $value:anything
+            addRoom: function (anything) {
+                rooms.$add({
+                    $value: anything
                 })
+            },
+            getMessages: function (chatRoomId) {
+                 return messages.orderByChild("roomId").equalTo(chatRoomId);
+            },
+            getRooms: function (roomId) {
+                console.log(firebaseRef.child('rooms').orderByChild("$id").equalTo(roomId))
+                 return firebaseRef.child('rooms').orderByChild("$id").equalTo(roomId);
             }
         }
 

@@ -1,7 +1,8 @@
 <div ng-controller='LandingCtrl as landing'>
     <ul>
         <li ng-repeat="chatRoom in landing.chatrooms">
-            {{ chatRoom.$value }}
+               <a ng-href="/chatroom-{{chatRoom.$id}}">{{ chatRoom.$value}}</a>
+
         </li>
     </ul>
    
