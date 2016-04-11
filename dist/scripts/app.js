@@ -17,7 +17,7 @@
                 controller: "ChatroomCtrl as chatroom",
                 resolve: {
                     roomInfo: ["$stateParams", "Room", function ($stateParams,Room) {
-                       return Room.getMessages($stateParams.id)
+                       return [$stateParams.id, Room.getMessages($stateParams.id)]
                     }]
                 }
             });

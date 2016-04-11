@@ -8,5 +8,6 @@
         </li>
     </ul>
 <div>
-    <input type="text" placeholder="Enter a Message">
+    <input ng-model='chatroom.messageText' type="text" placeholder="Enter a Message">
+    <button ng-click='chatroom.sendMessage()'>Send Message</button> 
 </div>
